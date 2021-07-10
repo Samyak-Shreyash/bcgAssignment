@@ -1,2 +1,2 @@
 # bcgAssignment
-An Attemmpt to make an insurance application for BCG assignment
+An Attempt to make an insurance application for BCG assignment
