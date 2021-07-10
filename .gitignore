@@ -49,6 +49,7 @@ typings/
 
 # Optional npm cache directory
 .npm
+package-lock.json
 
 # Optional eslint cache
 .eslintcache
@@ -96,6 +97,9 @@ dist
 
 # FuseBox cache
 .fusebox/
+
+#vscode Settings 
+.vscode
 
 # DynamoDB Local files
 .dynamodb/
