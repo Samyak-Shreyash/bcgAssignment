@@ -99,7 +99,7 @@ dist
 .fusebox/
 
 #vscode Settings 
-.vscode
+.vscode/
 
 # DynamoDB Local files
 .dynamodb/
