@@ -1,22 +1,22 @@
 {
-  "name": "bcg_assignment_server",
-  "version": "1.0.0",
-  "description": "Server to serve request coming from BCG app UI",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Samyak-Shreyash/bcgAssignment.git"
-  },
-  "author": "samyak-shreyash",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Samyak-Shreyash/bcgAssignment/issues"
-  },
-  "homepage": "https://github.com/Samyak-Shreyash/bcgAssignment#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "bcg_assignment_server",
+    "version": "1.0.0",
+    "description": "Server to serve request coming from BCG app UI",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Samyak-Shreyash/bcgAssignment.git"
+    },
+    "author": "samyak-shreyash",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Samyak-Shreyash/bcgAssignment/issues"
+    },
+    "homepage": "https://github.com/Samyak-Shreyash/bcgAssignment#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
