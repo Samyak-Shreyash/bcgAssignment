@@ -15,7 +15,7 @@ policy.post('/', (req, res, _next) => {
 
 policy.get('/:policyID', (req, res, _next) => {
     const id = req.params.policyID;
-    res.status(200).send({
+    res.status(202).send({
         message: 'You are searching for this ID',
         id: id
     });
