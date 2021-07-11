@@ -2,12 +2,20 @@ const express = require('express');
 const app = express();
 const { urlencoded, json } = require('express');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
 
 
 //TODO:Add Routes
 const policyRoute = require('./api/routes/policy');
 const customerRoute = require('./api/routes/customer');
+const regionRoute = require('./api/routes/region');
 
+//TODO: Add Mongoose Connection
+//TODO: Add try-catch Block
+mongoose.connect('mongodb+srv://baseUser:' + process.env.MONGO_ATLAS_PW + '@bcgproject.27zza.mongodb.net/insurance', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 app.use(morgan('dev'));
 app.use(urlencoded({ extended: false }));
@@ -29,6 +37,7 @@ app.use((req, res, _next) => {
 //TODO: Use Routes
 app.use('/policy', policyRoute);
 app.use('/customer', customerRoute);
+app.use('/region', regionRoute);
 
 app.use((req, res, _next) => {
     const error = new Error('Not Found');

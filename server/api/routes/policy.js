@@ -1,24 +1,34 @@
 const express = require('express');
 const policy = express.Router();
+const Policies = require('../models/policy');
+
 
 policy.get('/', (req, res, _next) => {
-    res.status(200).send({
-        message: 'Handling Get Request'
-    });
-});
-
-policy.post('/', (req, res, _next) => {
-    res.status(200).send({
-        message: 'Handling POST Request'
-    });
+    Policies.find()
+        .exec()
+        .then(doc => {
+            console.log(doc);
+            res.status(200).send(doc);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).send({ error: err })
+        })
 });
 
 policy.get('/:policyID', (req, res, _next) => {
-    const id = req.params.policyID;
-    res.status(202).send({
-        message: 'You are searching for this ID',
-        id: id
-    });
+    const id = req.params.policyID.toString();
+    console.log(id)
+    Policies.findOne({ "Policy_id": id })
+        .exec()
+        .then(doc => {
+            console.log(doc);
+            res.status(200).send(doc);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).send({ error: err })
+        })
 });
 policy.patch('/:policyID', (req, res, _next) => {
     const id = req.params.policyID;
