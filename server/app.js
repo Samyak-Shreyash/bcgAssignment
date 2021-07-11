@@ -14,7 +14,8 @@ const regionRoute = require('./api/routes/region');
 //TODO: Add try-catch Block
 mongoose.connect('mongodb+srv://baseUser:' + process.env.MONGO_ATLAS_PW + '@bcgproject.27zza.mongodb.net/insurance', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 });
 
 app.use(morgan('dev'));

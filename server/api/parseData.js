@@ -1,6 +1,6 @@
-function customerData(jsonVal) {
+function parseData(jsonVal) {
     var newData = {};
-    newData['Policy_id'] = jsonVal['Policy_id'];
+    newData['Policy ID'] = jsonVal['Policy_id'];
     newData['Fuel'] = jsonVal['Fuel'];
     newData['Vehicle Segment'] = jsonVal['VEHICLE_SEGMENT'];
     newData['Premium'] = jsonVal['Premium'];
@@ -14,4 +14,4 @@ function customerData(jsonVal) {
     return newData;
 }
 
-module.exports = customerData;
+module.exports = parseData;

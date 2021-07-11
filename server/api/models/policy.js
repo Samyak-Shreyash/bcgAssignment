@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
 
 const policySchema = mongoose.Schema({
-    _id: mongoose.Types.ObjectId,
-    "Policy_id": String,
+    "_id": Number,
     "Date of Purchase": String,
-    "Customer_id": String,
+    "Customer_id": Number,
     "Fuel": String,
     "VEHICLE_SEGMENT": String,
     "Premium": String,
