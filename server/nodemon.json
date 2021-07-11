@@ -1,0 +1,6 @@
+{
+    "env": {
+        "MONGO_ATLAS_PW": "baseuser.02",
+        "PORT": "5000"
+    }
+}

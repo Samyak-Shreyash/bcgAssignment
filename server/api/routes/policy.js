@@ -22,9 +22,12 @@ policy.get('/:policyID', (req, res, _next) => {
 });
 policy.patch('/:policyID', (req, res, _next) => {
     const id = req.params.policyID;
+    const pol = { 'premium': req.body.premium };
+
     res.status(200).send({
         message: 'You are updating for this ID',
-        id: id
+        id: id,
+        'policy': pol
     });
 });
 

@@ -1,12 +1,30 @@
 const express = require('express');
 const app = express();
+const { urlencoded, json } = require('express');
 const morgan = require('morgan');
+
 
 //TODO:Add Routes
 const policyRoute = require('./api/routes/policy');
 const customerRoute = require('./api/routes/customer');
 
+
 app.use(morgan('dev'));
+app.use(urlencoded({ extended: false }));
+app.use(json());
+
+
+//TODO: Add CORS path
+app.use((req, res, _next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    if (req.method == 'OPTIONS') {
+        res.header("Access-Control-Allow-Methods", "GET,PATCH");
+        return res.status(200).send({});
+    }
+    _next();
+});
+
 
 //TODO: Use Routes
 app.use('/policy', policyRoute);
@@ -27,6 +45,5 @@ app.use((error, req, res, _next) => {
     })
 });
 
-//TODO: Add CORS path
 //TODO: Add middleware for requests
 module.exports = app;
