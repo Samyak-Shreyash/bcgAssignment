@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function PolicyModal(props) {
     const {policyData} = props;

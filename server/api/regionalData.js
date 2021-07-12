@@ -7,7 +7,7 @@ function getRegionalData(jsonVal) {
         if ((jsonVal[i]['Date of Purchase']).includes('/')) {
             var month = parseInt((jsonVal[i]['Date of Purchase']).split('/')[0])
         } else {
-            var month = parseInt((jsonvfcd...Val[i]['Date of Purchase']).split('-')[0])
+            var month = parseInt((jsonVal[i]['Date of Purchase']).split('-')[0])
         }
         // console.log(jsonVal[i]['Date of Purchase'], month);
         if (newData[(monthName[month])] === undefined || newData[(monthName[month])] === null) {
