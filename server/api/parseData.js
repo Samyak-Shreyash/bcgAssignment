@@ -1,15 +1,15 @@
 function parseData(jsonVal) {
     var newData = {};
-    newData['Policy ID'] = jsonVal['Policy_id'];
+    newData['Policy_id'] = jsonVal['_id'];
+    newData['Cust_id'] = jsonVal['Customer_id'];
+    newData['date_of_purchase'] = jsonVal['Date of Purchase'];
     newData['Fuel'] = jsonVal['Fuel'];
-    newData['Vehicle Segment'] = jsonVal['VEHICLE_SEGMENT'];
+    newData['VehicleSegment'] = jsonVal['VEHICLE_SEGMENT'];
     newData['Premium'] = jsonVal['Premium'];
-    newData['bodily injury liability'] = jsonVal['bodily injury liability'];
-    newData['personal injury protection'] = jsonVal[' personal injury protection'];
-    newData['property damage liability'] = jsonVal[' property damage liability'];
-    newData['Customer Income group'] = jsonVal['Customer_Income group'];
-    newData['Customer Region'] = jsonVal['Customer_Region'];
-    newData['Customer Marital Status'] = jsonVal['Customer_Marital_status'];
+    newData['Cust_Inc_group'] = jsonVal['Customer_Income group'];
+    newData['Cust_gender'] = jsonVal['Customer_Gender'];
+    newData['Cust_region'] = jsonVal['Customer_Region'];
+    newData['Cust_Marital_Status'] = jsonVal['Customer_Marital_status'];
 
     return newData;
 }
